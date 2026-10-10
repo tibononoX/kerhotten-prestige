@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+  Private redesign proposal, photos © Gîtes de Kerhotten, not for publication without owners' consent.
+  Proposition de refonte – Option B « Prestige » – maquette privée. Photos © Gîtes de Kerhotten,
+  ne pas publier sans l'accord écrit des propriétaires. Faits repris uniquement de www.gitesdekerhotten.fr ;
+  tarifs, disponibilités et paiement = démonstration / emplacements à compléter.
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n-doc="%%TK%%">%%TITLE%%</title>
+<meta name="description" content="%%DESC%%" data-i18n-desc="%%DK%%">
+<!-- Maquette privée : ne pas indexer (à retirer uniquement après accord des propriétaires) -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="%%CANON%%">
+<meta name="theme-color" content="#101a1e">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Gîtes de Kerhotten">
+<meta property="og:title" content="%%TITLE%%">
+<meta property="og:description" content="%%DESC%%">
+<meta property="og:image" content="assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/marcellus-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+%%PRELOAD%%
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23101a1e'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%23c9b08a' font-family='Georgia,serif'%3EK%3C/text%3E%3C/svg%3E">
+<style>%%CSS%%</style>
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/js/site.min.js" defer></script>
+</head>
+<body class="%%BODYCLASS%%">
+<a class="skip" href="#main">[[Aller au contenu || Skip to content || Zum Inhalt springen]]</a>
+<p class="mock-strip">[[Proposition de refonte – Option B Prestige – maquette || Redesign proposal – Option B Prestige – mock-up || Redesign-Vorschlag – Option B Prestige – Entwurf]]</p>
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="brand" href="index.html"><span class="brand-k" aria-hidden="true">K</span><span class="brand-t">Kerhotten<small>[[Hameau de 1697 · Morbihan || Hamlet of 1697 · Brittany || Weiler von 1697 · Bretagne]]</small></span></a>
+    <nav class="nav" id="nav" {{aria-label: Navigation principale || Main navigation || Hauptnavigation}}>
+      <ul>
+%%NAV%%
+      </ul>
+    </nav>
+    <div class="hdr-act">
+      <div class="lang" role="group" aria-label="Langue · Language · Sprache">
+        <button type="button" data-lang="fr" aria-pressed="true" lang="fr">FR</button><button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button><button type="button" data-lang="de" aria-pressed="false" lang="de">DE</button>
+      </div>
+      <a class="btn btn-gold hdr-cta" href="reserver.html">[[Réserver || Book || Buchen]]</a>
+      <button type="button" class="burger" aria-expanded="false" aria-controls="nav"><span class="sr">[[Menu || Menu || Menü]]</span><i aria-hidden="true"></i></button>
+    </div>
+  </div>
+</header>
+<main id="main">
+%%BODY%%
+</main>
+<footer class="ftr">
+  <div class="wrap ftr-grid">
+    <div>
+      <p class="ftr-brand">Kerhotten</p>
+      <p>1, Hameau de Kervotten<br>56160 Langoëlan · Morbihan</p>
+      <p><a href="tel:+33628603255">06 28 60 32 55</a><br><a href="mailto:kerhotten@outlook.fr">kerhotten@outlook.fr</a></p>
+    </div>
+    <ul class="ftr-links">
+      <li><a href="le-saule.html">Le Saule · Willow</a></li>
+      <li><a href="la-chataigne.html">La Châtaigne · Chestnut</a></li>
+      <li><a href="la-grange.html">La Grange · Granary</a></li>
+      <li><a href="privatisation.html">[[Privatiser le hameau || Private hire of the hamlet || Den Weiler exklusiv mieten]]</a></li>
+      <li><a href="reserver.html">[[Disponibilités & réservation || Availability & booking || Verfügbarkeit & Buchung]]</a></li>
+    </ul>
+    <div class="ftr-legal">
+      <p class="ph-inline">[[Mentions légales · Confidentialité · CGV (à compléter) || Legal notice · Privacy · Terms (to be completed) || Impressum · Datenschutz · AGB (zu ergänzen)]]</p>
+      <p>[[Proposition de refonte privée (maquette) – photos © Gîtes de Kerhotten, non destinées à la publication sans l'accord des propriétaires. || Private redesign proposal (mock-up) – photos © Gîtes de Kerhotten, not for publication without the owners’ consent. || Privater Redesign-Vorschlag (Entwurf) – Fotos © Gîtes de Kerhotten, keine Veröffentlichung ohne Zustimmung der Eigentümer.]]</p>
+    </div>
+  </div>
+</footer>
+<dialog class="lb" id="lb" {{aria-label: Galerie photo || Photo gallery || Fotogalerie}}>
+  <div class="lb-in">
+    <figure class="lb-fig"><img id="lb-img" alt="" width="1280" height="960"><figcaption><span id="lb-cap"></span> <span class="lb-count" id="lb-count"></span></figcaption></figure>
+    <button type="button" class="lb-btn lb-prev" id="lb-prev" {{aria-label: Photo précédente || Previous photo || Vorheriges Foto}}><span aria-hidden="true">‹</span></button>
+    <button type="button" class="lb-btn lb-next" id="lb-next" {{aria-label: Photo suivante || Next photo || Nächstes Foto}}><span aria-hidden="true">›</span></button>
+    <button type="button" class="lb-btn lb-close" id="lb-close" {{aria-label: Fermer la galerie || Close gallery || Galerie schließen}}><span aria-hidden="true">×</span></button>
+  </div>
+</dialog>
+</body>
+</html>

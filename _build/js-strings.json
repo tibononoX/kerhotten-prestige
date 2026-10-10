@@ -1,0 +1,22 @@
+{
+ "pickIn": {"fr": "Sélectionnez votre date d'arrivée.", "en": "Select your arrival date.", "de": "Wählen Sie Ihr Anreisedatum."},
+ "pickOut": {"fr": "Sélectionnez votre date de départ.", "en": "Select your departure date.", "de": "Wählen Sie Ihr Abreisedatum."},
+ "picked": {"fr": "Dates sélectionnées. Vous pouvez continuer.", "en": "Dates selected. You can continue.", "de": "Daten ausgewählt. Sie können fortfahren."},
+ "overlap": {"fr": "Ces dates incluent une nuit déjà réservée (démo). Choisissez une autre période.", "en": "These dates include a night that is already booked (demo). Please choose another period.", "de": "Dieser Zeitraum enthält eine bereits belegte Nacht (Demo). Bitte wählen Sie einen anderen Zeitraum."},
+ "free": {"fr": "disponible", "en": "available", "de": "verfügbar"},
+ "booked": {"fr": "réservé (démo)", "en": "booked (demo)", "de": "belegt (Demo)"},
+ "past": {"fr": "passé", "en": "past", "de": "vergangen"},
+ "selected": {"fr": "sélectionné", "en": "selected", "de": "ausgewählt"},
+ "needDates": {"fr": "Choisissez d'abord vos dates d'arrivée et de départ.", "en": "Please choose your arrival and departure dates first.", "de": "Bitte wählen Sie zuerst Ihr An- und Abreisedatum."},
+ "tooMany": {"fr": "{n} voyageurs : la capacité maximale de {s} est de {c} personnes.", "en": "{n} guests: {s} sleeps {c} people maximum.", "de": "{n} Gäste: {s} bietet maximal {c} Personen Platz."},
+ "night": {"fr": "nuit", "en": "night", "de": "Nacht"},
+ "nights": {"fr": "nuits", "en": "nights", "de": "Nächte"},
+ "adult": {"fr": "adulte", "en": "adult", "de": "Erwachsener"},
+ "adults": {"fr": "adultes", "en": "adults", "de": "Erwachsene"},
+ "child": {"fr": "enfant", "en": "child", "de": "Kind"},
+ "children": {"fr": "enfants", "en": "children", "de": "Kinder"},
+ "hameau": {"fr": "Hameau entier", "en": "Whole hamlet", "de": "Ganzer Weiler"},
+ "mailSubject": {"fr": "Demande de disponibilité – {s} – du {a} au {d}", "en": "Availability request – {s} – {a} to {d}", "de": "Verfügbarkeitsanfrage – {s} – {a} bis {d}"},
+ "mailBody": {"fr": "Bonjour Cindy et Eddy,\n\nJe souhaiterais connaître vos disponibilités et vos tarifs pour :\n- Hébergement : {s}\n- Arrivée : {a}\n- Départ : {d} ({n})\n- Voyageurs : {g}\n\nMerci d'avance.", "en": "Hello Cindy and Eddy,\n\nI would like to know your availability and rates for:\n- Accommodation: {s}\n- Arrival: {a}\n- Departure: {d} ({n})\n- Guests: {g}\n\nThank you.", "de": "Hallo Cindy und Eddy,\n\nich möchte gern Verfügbarkeit und Preise erfragen für:\n- Unterkunft: {s}\n- Anreise: {a}\n- Abreise: {d} ({n})\n- Gäste: {g}\n\nVielen Dank."},
+ "photo": {"fr": "Photo {i} sur {n}", "en": "Photo {i} of {n}", "de": "Foto {i} von {n}"}
+}

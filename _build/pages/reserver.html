@@ -1,0 +1,82 @@
+@title Disponibilités et réservation – Gîtes de Kerhotten (démonstration) || Availability and booking – Gîtes de Kerhotten (demo) || Verfügbarkeit und Buchung – Gîtes de Kerhotten (Demo)
+@desc Consultez les disponibilités des suites du hameau de Kerhotten et préparez votre séjour. Démonstration d'un futur moteur de réservation. || Check availability for the suites of the Kerhotten hamlet and plan your stay. Demo of a future booking engine. || Prüfen Sie die Verfügbarkeit der Suiten im Weiler Kerhotten und planen Sie Ihren Aufenthalt. Demo einer künftigen Buchungsmaschine.
+@bodyclass book-page
+<section class="sec book" aria-labelledby="h1">
+  <div class="wrap">
+    <header class="book-head">
+      <p class="kicker kicker-dark">[[Réservation || Booking || Buchung]]</p>
+      <h1 id="h1">[[Disponibilités <em>&amp; réservation</em> || Availability <em>&amp; booking</em> || Verfügbarkeit <em>&amp; Buchung</em>]]</h1>
+      <div class="demo-banner" role="note">
+        <strong>[[Démonstration || Demo || Demo]]</strong>
+        <span>[[Disponibilités fictives, aucun tarif réel, aucun paiement, aucune donnée envoyée. Cette page montre où se brancheraient le calendrier synchronisé (iCal) et le paiement en ligne. || Fictitious availability, no real rates, no payment, no data sent. This page shows where a synced calendar (iCal) and online payment would plug in. || Fiktive Verfügbarkeit, keine echten Preise, keine Zahlung, keine Datenübertragung. Diese Seite zeigt, wo ein synchronisierter Kalender (iCal) und Online-Zahlung angebunden würden.]]</span>
+      </div>
+      <ol class="steps" aria-label="Étapes · Steps · Schritte">
+        <li class="on" data-step="1"><span>1</span>[[Hébergement || Accommodation || Unterkunft]]</li>
+        <li data-step="2"><span>2</span>[[Dates & voyageurs || Dates & guests || Daten & Gäste]]</li>
+        <li data-step="3"><span>3</span>[[Récapitulatif || Summary || Übersicht]]</li>
+        <li data-step="4"><span>4</span>[[Paiement || Payment || Zahlung]]</li>
+      </ol>
+    </header>
+
+    <div class="book-grid">
+      <div class="book-main">
+        <fieldset class="suite-pick">
+          <legend>[[Choisissez votre hébergement || Choose your accommodation || Wählen Sie Ihre Unterkunft]]</legend>
+          <label class="sp"><input type="radio" name="suite" value="saule" data-cap="5" checked><span><b>Le Saule</b> <small>Willow · [[5 pers. · 90 m² || 5 guests · 90 m² || 5 Pers. · 90 m²]]</small></span></label>
+          <label class="sp"><input type="radio" name="suite" value="chataigne" data-cap="10"><span><b>La Châtaigne</b> <small>Chestnut · [[8 à 10 pers. · 130 m² || 8–10 guests · 130 m² || 8–10 Pers. · 130 m²]]</small></span></label>
+          <label class="sp"><input type="radio" name="suite" value="grange" data-cap="7"><span><b>La Grange</b> <small>Granary · [[7 pers. · 95 m² || 7 guests · 95 m² || 7 Pers. · 95 m²]]</small></span></label>
+          <label class="sp"><input type="radio" name="suite" value="hameau" data-cap="20"><span><b>[[Hameau entier || Whole hamlet || Ganzer Weiler]]</b> <small>[[3 maisons · 20 couchages max. || 3 houses · 20 beds max. || 3 Häuser · max. 20 Schlafplätze]]</small></span></label>
+        </fieldset>
+
+        <div class="cal-wrap">
+          <div class="cal-bar">
+            <button type="button" class="cal-nav" id="cal-prev" {{aria-label: Mois précédents || Previous months || Vorherige Monate}}>‹</button>
+            <p class="cal-hint" id="cal-hint" aria-live="polite">[[Sélectionnez votre date d'arrivée. || Select your arrival date. || Wählen Sie Ihr Anreisedatum.]]</p>
+            <button type="button" class="cal-nav" id="cal-next" {{aria-label: Mois suivants || Next months || Nächste Monate}}>›</button>
+          </div>
+          <div class="cal-months" id="cal"></div>
+          <ul class="legend">
+            <li><i class="lg-free"></i>[[Disponible || Available || Verfügbar]]</li>
+            <li><i class="lg-booked"></i>[[Réservé (fictif, démo) || Booked (fictitious, demo) || Belegt (fiktiv, Demo)]]</li>
+            <li><i class="lg-sel"></i>[[Votre sélection || Your selection || Ihre Auswahl]]</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="summary" aria-labelledby="h-sum">
+        <h2 id="h-sum">[[Votre séjour || Your stay || Ihr Aufenthalt]]</h2>
+        <div class="guests">
+          <div class="stepper">
+            <span id="lab-ad">[[Adultes || Adults || Erwachsene]]</span>
+            <div><button type="button" data-step-for="ad" data-d="-1" {{aria-label: Un adulte de moins || One adult fewer || Ein Erwachsener weniger}}>−</button><output id="ad" aria-labelledby="lab-ad" aria-live="polite">2</output><button type="button" data-step-for="ad" data-d="1" {{aria-label: Un adulte de plus || One more adult || Ein Erwachsener mehr}}>+</button></div>
+          </div>
+          <div class="stepper">
+            <span id="lab-ch">[[Enfants || Children || Kinder]]</span>
+            <div><button type="button" data-step-for="ch" data-d="-1" {{aria-label: Un enfant de moins || One child fewer || Ein Kind weniger}}>−</button><output id="ch" aria-labelledby="lab-ch" aria-live="polite">0</output><button type="button" data-step-for="ch" data-d="1" {{aria-label: Un enfant de plus || One more child || Ein Kind mehr}}>+</button></div>
+          </div>
+        </div>
+        <dl class="sum-list">
+          <div><dt>[[Hébergement || Accommodation || Unterkunft]]</dt><dd id="s-suite">Le Saule</dd></div>
+          <div><dt>[[Arrivée || Arrival || Anreise]]</dt><dd id="s-in">—</dd></div>
+          <div><dt>[[Départ || Departure || Abreise]]</dt><dd id="s-out">—</dd></div>
+          <div><dt>[[Nuits || Nights || Nächte]]</dt><dd id="s-n">—</dd></div>
+          <div><dt>[[Voyageurs || Guests || Gäste]]</dt><dd id="s-g">2</dd></div>
+          <div class="sum-price"><dt>[[Tarif || Rate || Preis]]</dt><dd><span class="ph-tag">[[À définir || To be defined || Festzulegen]]</span></dd></div>
+        </dl>
+        <p class="form-msg" id="b-msg" role="alert"></p>
+        <button type="button" class="btn btn-dark btn-block" id="b-continue">[[Continuer vers le paiement || Continue to payment || Weiter zur Zahlung]]</button>
+
+        <div class="pay" id="pay" hidden tabindex="-1">
+          <p class="pay-title">[[4 · Paiement sécurisé || 4 · Secure payment || 4 · Sichere Zahlung]]</p>
+          <div class="pay-slot">
+            <p><strong>[[Emplacement du module de paiement || Payment module placeholder || Platzhalter für das Zahlungsmodul]]</strong></p>
+            <p>[[Ici s'afficherait le formulaire sécurisé du prestataire choisi (par ex. Stripe, PayPal ou le moteur d'une centrale de réservation) : acompte puis solde. || The chosen provider’s secure form would appear here (e.g. Stripe, PayPal or a booking platform’s engine): deposit, then balance. || Hier erschiene das sichere Formular des gewählten Anbieters (z. B. Stripe, PayPal oder eine Buchungsplattform): Anzahlung, dann Restbetrag.]]</p>
+          </div>
+          <p class="pay-note">[[Démonstration : aucune réservation n'a été créée et rien n'a été envoyé. || Demo: no booking has been created and nothing has been sent. || Demo: Es wurde keine Buchung angelegt und nichts versendet.]]</p>
+          <a class="btn btn-line-dark btn-block" id="b-mail" href="mailto:kerhotten@outlook.fr">[[Préparer plutôt une demande par e-mail || Prepare an email request instead || Stattdessen eine E-Mail-Anfrage vorbereiten]]</a>
+          <p class="small">[[Le lien ouvre votre messagerie avec un message pré-rempli ; rien n'est envoyé sans votre action. || The link opens your mail app with a pre-filled message; nothing is sent unless you send it. || Der Link öffnet Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht; nichts wird ohne Ihr Zutun versendet.]]</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
