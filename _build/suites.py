@@ -43,6 +43,7 @@ _MAN=_json.load(open(_os.path.join(_os.path.dirname(__file__),'manifest.json')))
 def _srcset(n):
     return ', '.join(f"assets/img/{n}-{w}.webp {w}w" for w in _MAN[n]['w'])
 
+LINKS={'saule': '<a class="btn btn-dark" href="https://www.abritel.fr/location-vacances/p1782928" target="_blank" rel="noopener">[[Réserver sur Abritel || Book on Abritel || Buchen auf Abritel]]<span class="sr"> [[(nouvel onglet) || (new tab) || (neuer Tab)]]</span></a><a class="btn btn-dark" href="https://www.vrbo.com/1782928a" target="_blank" rel="noopener">[[Réserver sur Vrbo || Book on Vrbo || Buchen auf Vrbo]]<span class="sr"> [[(nouvel onglet) || (new tab) || (neuer Tab)]]</span></a>', 'chataigne': '<a class="btn btn-dark" href="https://www.vrbo.com/1781689a" target="_blank" rel="noopener">[[Réserver sur Vrbo || Book on Vrbo || Buchen auf Vrbo]]<span class="sr"> [[(nouvel onglet) || (new tab) || (neuer Tab)]]</span></a>', 'grange': '<a class="btn btn-dark" href="https://www.abritel.fr/location-vacances/p1781639" target="_blank" rel="noopener">[[Réserver sur Abritel || Book on Abritel || Buchen auf Abritel]]<span class="sr"> [[(nouvel onglet) || (new tab) || (neuer Tab)]]</span></a><a class="btn btn-dark" href="https://www.vrbo.com/1781639a" target="_blank" rel="noopener">[[Réserver sur Vrbo || Book on Vrbo || Buchen auf Vrbo]]<span class="sr"> [[(nouvel onglet) || (new tab) || (neuer Tab)]]</span></a>', 'hameau': '<a class="btn btn-dark" href="https://www.abritel.fr/location-vacances/p2062126" target="_blank" rel="noopener">[[Réserver sur Abritel || Book on Abritel || Buchen auf Abritel]]<span class="sr"> [[(nouvel onglet) || (new tab) || (neuer Tab)]]</span></a>'}
 def page(s, others):
     specs = '\n'.join(f'<div><dt>[[{a}]]</dt><dd>[[{b}]]</dd></div>' for a, b in s['specs'])
     layout = '\n'.join(f'<div class="lay rv"><h3>[[{a}]]</h3><p>[[{b}]]</p></div>' for a, b in s['layout'])
@@ -64,7 +65,7 @@ def page(s, others):
     </dl>
     <p class="ph-box"><span class="ph-tag">[[À compléter || To be completed || Zu ergänzen]]</span> [[Tarifs par saison : non publiés sur le site actuel. || Seasonal rates: not published on the current site. || Saisonpreise: auf der aktuellen Website nicht veröffentlicht.]]</p>
     <div class="s-cta">
-      <a class="btn btn-dark" href="reserver.html?suite={s['key']}">[[Vérifier les disponibilités || Check availability || Verfügbarkeit prüfen]]</a>
+      {LINKS[s['key']]}
       <a class="btn btn-line-dark" href="#galerie">[[Voir la galerie || View the gallery || Galerie ansehen]]</a>
     </div>
   </div>
